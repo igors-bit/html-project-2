@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="lv">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mana spēle - Castlevania Survival</title>
+    </head>
+    <section id="sakums">
+<body  style="background-color:rgb(197, 157, 83);">
+    <h1 style="color:#631700;text-align: center; font-family: Bookman, serif;">Mana spēle</h1>
+    <h2 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+     Arial, sans-serif;">Castlevania Survival</h2>
+
+     <p style="color:#557400">Spēlē ir nepieciešams pieveikt visus pretiniekus un "Velna karaļvalsti"</p>
+
+     <ul style="color:#8b2902; border-radius: 12px;">
+        <li>1.Noteikums - Kārtīgi izlasīt apakšstāstu un stāstu.</li>
+        <li>2.Noteikums - Spēli vada ar būltiņas taustiņiem ar labo un kreiso būltiņu.</li>
+        <li>3.Noteikums - Kā ari izmanto space lai lektu.</li>
+        <li>4.Noteikums - Kā ari izmanto shift lai sistu.</li>
+        <li>5.Noteikums - Lai patītu uz nākamo tekstu, kad esi izlasījis izmanto enter.</li>
+        <li>6.Noteikums - Lai atsāktu nospied restart pogu uz ekrāna.</li>
+     </ul>
+<hr>
+     <h2>Mērķis manai spēlei</h2>
+     <p>Lai uzvarētu spēli tev vajag nogalināt pēdējo bosu spēlē.</p>
+     <p>Spēlē vajag paveikt kopā 4 galvenos mērķus.</p>
+     <p>1. Mērķis - Nogalināt ļauno priesteru ar nazi un dabūt slepeno dziru.</p>
+     <p>2. Mērķis - Noindēt ar dziru guļošo princi.</p>
+     <p>3. Mērķis - Igūt zobenu</p>
+     <p>4. Mērķis - Novērst Velna karaļvalsti.</p>
+<hr>
+     
+  <h2>Sākt spēli</h2>
+  <button style="background-color: #58a500; color: rgb(0, 0, 0); padding: 16px 32px; border: none; cursor: pointer;" onclick="document.getElementById('atbilde').textContent='Game is started...'">Start game</button>
+<button style="background-color: #af4f00; color: rgb(44, 56, 0); padding: 16px 32px; border: none; cursor: pointer;" onclick="paraditSpeli()">start</button>
+</section>
+<p id="atbilde">Start the game.</p>
+
+<section id="laukums" class="laukums" hidden>
+<style>
+  .laukums {
+    width: 340px;
+    padding: 20px;
+    border: 3px solid #91242d;
+    margin:20px;
+    background-color: #9ccf71;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+</style>
+<h2>Game screen</h2>
+  <p>Kills: 0</p>
+  <p>There will be a player here later.</p>
+  <button style="background-color: #0d9678; color: rgb(35, 44, 0); padding: 16px 32px; border: none; cursor: pointer;" onclick="paraditSakumu()">Back to menu</button>
+  </section>
+<script>
+function paraditSpeli() {
+  document.getElementById("sakums").hidden = true;
+  document.getElementById("laukums").hidden = false;
+}
+function paraditSakumu() {
+  document.getElementById("sakums").hidden = false;
+  document.getElementById("laukums").hidden = true;
+}
+</script>
+
+</body>
+</html>
