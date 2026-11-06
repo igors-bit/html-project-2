@@ -31,8 +31,7 @@
 <hr>
      
   <h2>Sākt spēli</h2>
-  <button style="background-color: #58a500; color: rgb(0, 0, 0); padding: 16px 32px; border: none; cursor: pointer;" onclick="document.getElementById('atbilde').textContent='Game is started...'">Start game</button>
-<button style="background-color: #af4f00; color: rgb(44, 56, 0); padding: 16px 32px; border: none; cursor: pointer;" onclick="paraditSpeli()">start</button>
+<button style="background-color: #af4f00; color: rgb(44, 56, 0); padding: 16px 32px; border: none; cursor: pointer;" onclick="document.getElementById('atbilde').textContent='Game is started...'; paraditSpeli()">start</button>
 </section>
 <p id="atbilde">Start the game.</p>
 
@@ -45,7 +44,7 @@
     margin:20px auto;
     background-color: #9ccf71;
     box-sizing: border-box;
-    max-width: 200%;
+    max-width: 100%;
   }
 </style>
 <h2>Game screen</h2>
@@ -53,19 +52,19 @@
   <button style="background-color: #0d9678; color: rgb(35, 44, 0); padding: 16px 32px; border: none; cursor: pointer;" onclick="paraditSakumu()">Back to menu</button>
   <img src="hero2.png" alt="Player character" width="128">
   <p> Left arrow</p>
-  <audio controls src="klikskis.wav"></audio>
+  <audio controls src="soundreality-pen-click-411629.mp3"></audio>
   <p> Right arrow</p>
-  <audio controls src="klikskis.wav"></audio>
+  <audio controls src="soundreality-pen-click-411629.mp3"></audio>
   <p> Space bar</p>
-  <audio controls src="klikskis.wav"></audio>
+  <audio controls src="soundreality-pen-click-411629.mp3"></audio>
   <p> Shift key</p>
-  <audio controls src="klikskis.wav"></audio>
+  <audio controls src="soundreality-pen-click-411629.mp3"></audio>
   <p> Up arrow</p>
-  <audio controls src="klikskis.wav"></audio>
+  <audio controls src="soundreality-pen-click-411629.mp3"></audio>
   <p> Down arrow</p>
-  <audio controls src="klikskis.wav"></audio>
+  <audio controls src="soundreality-pen-click-411629.mp3"></audio>
   <p> Shift key</p>
-  <audio controls src="klikskis.wav"></audio>
+  <audio controls src="soundreality-pen-click-411629.mp3"></audio>
   <ul>
     <li>Character can move left and right</li>
     <li>Character can jump</li>
@@ -74,8 +73,8 @@
     <li>Character has health points and any time he gets hit, his health decreases</li>
     <li>Character can die if his health reaches zero</li>
   </ul>
-  <p id="punkti">Punkti: 0</p>
-<button onclick="savakt()">Savākt punktu</button>
+  <p id="points">points: 0</p>
+<button onclick="savakt()">collect point</button>
   </section>
 
 <script>
@@ -87,10 +86,10 @@ function paraditSakumu() {
   document.getElementById("sakums").hidden = false;
   document.getElementById("laukums").hidden = true;
 }
-let punkti = 0;
+let points = 0;
 function savakt() {
-  punkti = punkti + 1;
-  document.getElementById("punkti").textContent = "Punkti: " + punkti;
+  points = points + 1;
+  document.getElementById("points").textContent = "points: " + points;
 }
 </script>
 
